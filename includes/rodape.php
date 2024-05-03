@@ -1,6 +1,6 @@
 <footer id="footer" class="footer">
         <div class="credits">
-             Criado Por <a href="http://<?=$_SERVER['HTTP_HOST']?>/gestaoPontoSeduc/gestor/creditos.php">Zephyr</a>
+             Criado Por <a href="http://<?=$_SERVER['HTTP_HOST']?>/gestaoPonto/gestor/creditos.php">Zephyr</a>
         </div>
     </footer>
 

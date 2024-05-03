@@ -120,9 +120,6 @@ session_start();
 
 <!-- FIM DO MENU PRINCIPAL -->
 <footer class="footer">
-        <div class="copyright">
-        <strong><span>SEDUC</span></strong> - Secretaria de Estado do Educação - Copyright &copy; <?=date('Y')?>. Todos os direitos reservados.
-        </div>
         <div class="credits">
              Criado Por <a href="http://<?=$_SERVER['HTTP_HOST']?>/gestaoPontoSeduc/gestor/creditos.php">Zephyr</a>
         </div>

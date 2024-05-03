@@ -526,7 +526,29 @@ class SQL {
         return $this->executarQueryBoleano($sql);        
     }
 
+    function verificaSenha($senha, $id){
+
+        $sql = "
+            select * from gestaoponto.usuario u
+            where u.senha = '$senha' and
+            u.id_usuario = $id
+        ";
+
+        #echo '<pre>' . $sql;exit;
+        return $this->executarQuery($sql);        
+    }
+
     function atualizarSenha($antiga, $nova, $id){
+
+        session_start();
+
+        $confSenha = $this->verificaSenha($antiga, $_SESSION['usuario']['id_usuario']);
+
+        $arrayResposta = array();
+        if($confSenha == ""){
+            $arrayResposta = array('informacao' => 'ERROR');
+            return $arrayResposta;
+        }
 
         $sql = "
         UPDATE usuario 
@@ -640,7 +662,8 @@ class SQL {
                 data_inicio,
                 duracao, 
                 adiantamento_13, 
-                dias_adicionais
+                dias_adicionais,
+                status
             ) 
 
 
@@ -650,7 +673,8 @@ class SQL {
                     '$dtIni',
                     $duracao,
                     '$adiantamento',
-                    '$adicionais'
+                    '$adicionais',
+                    '1'
 
                 )
 
@@ -659,6 +683,34 @@ class SQL {
 
         #echo "<pre>" . $sql;exit;
         return $this->executarQueryBoleano($sql);    
+    }
+
+    function getFeriasPorUsuarios($id){
+
+        $sql = "
+         SELECT * from gestaoponto.ferias f
+            join gestaoponto.usuario u
+            on u.id_usuario = f.id_usuario
+         where f.id_usuario = $id
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQuery($sql);  
+
+    }
+
+    function getFeriasPendentes(){
+
+        $sql = "
+        SELECT * from gestaoponto.ferias f
+            JOIN gestaoponto.usuario u
+            on u.id_usuario = f.id_usuario
+        where f.status = '1';
+       ";
+
+       #echo "<pre>" . $sql;exit;
+       return $this->executarQuery($sql); 
+
     }
 
 
