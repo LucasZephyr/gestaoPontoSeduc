@@ -1,0 +1,22 @@
+
+/gestaoPontoSeduc/gestor/ajax/protocoloEsqueciSenha.php##&ip:Zephyr&horario:2024-03-03 01:40:04&user:
+/gestaoPontoSeduc/gestor/processa/processa_login.php##&ip:Zephyr&horario:2024-03-03 01:40:37&user:
+/gestaoPontoSeduc/gestor/index.php##&ip:Zephyr&horario:2024-03-03 01:40:38&user:6
+/gestaoPontoSeduc/gestor/ajax/alterarDadosPrimeiroAcesso.php##&ip:Zephyr&horario:2024-04-20 22:28:14&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/registrarPontoEletronico.php##&ip:Zephyr&horario:2024-04-20 17:34:27&usuario_id:16&usuario_nome:ANTONIO LUCAS MATOS
+/gestaoPontoSeduc/gestor/ajax/registrarPonto.php##&ip:Zephyr&horario:2024-04-20 22:34:34&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/solitarAbono.php##&ip:Zephyr&horario:2024-04-20 17:34:42&usuario_id:16&usuario_nome:ANTONIO LUCAS MATOS
+/gestaoPontoSeduc/gestor/ajax/solicitarAbono.php##&ip:Zephyr&horario:2024-04-20 22:37:18&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/solicitarAbonoRequicao.php##&ip:Zephyr&horario:2024-04-20 22:37:21&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/criarAbono.php##&ip:Zephyr&horario:2024-04-20 22:37:58&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/verAbonosSolicitados.php##&ip:Zephyr&horario:2024-04-20 17:38:12&usuario_id:16&usuario_nome:ANTONIO LUCAS MATOS
+/gestaoPontoSeduc/gestor/ajax/verDatelhesAbonoSolicitacao.php##&ip:Zephyr&horario:2024-04-20 22:38:19&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/controleAbonoADM.php##&ip:Zephyr&horario:2024-04-20 17:38:50&usuario_id:6&usuario_nome:Antonio Lucas Matos do Carmo
+/gestaoPontoSeduc/gestor/ajax/atualizarDadosConta.php##&ip:Zephyr&horario:2024-04-21 18:41:16&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/alterarSenha.php##&ip:Zephyr&horario:2024-04-21 20:58:50&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/aprovarAbono.php##&ip:Zephyr&horario:2024-04-21 21:31:14&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/reprovarAbono.php##&ip:Zephyr&horario:2024-04-21 21:41:13&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/gestaoUsuarios.php##&ip:kubernetes.docker.internal&horario:2024-05-01 04:16:17&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/alterarStatusUsuario.php##&ip:kubernetes.docker.internal&horario:2024-05-01 04:58:51&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/solicFerias.php##&ip:kubernetes.docker.internal&horario:2024-05-01 17:11:36&usuario_id:6&usuario_nome:Antonio Lucas Matos do Carmo(adm)
+/gestaoPontoSeduc/gestor/ajax/inserirFerias.php##&ip:kubernetes.docker.internal&horario:2024-05-01 23:11:03&usuario_id:&usuario_nome:
