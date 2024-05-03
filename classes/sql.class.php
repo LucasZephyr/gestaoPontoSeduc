@@ -713,6 +713,15 @@ class SQL {
 
     }
 
+    function totalFeriasSolic(){
+        $sql = "
+        SELECT count(*) ferias from gestaoponto.ferias f
+       ";
+
+       #echo "<pre>" . $sql;exit;
+       return $this->executarQuery($sql); 
+    }
+
 
 
 

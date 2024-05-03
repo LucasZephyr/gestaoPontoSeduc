@@ -15,6 +15,9 @@ $grafico1 = $sql->distribuicaoUsuarios();
 $usuarios_ativos = $grafico1[0]['usuarios_ativos'];
 $usuarios_inativos = $grafico1[0]['usuarios_inativos'];
 
+
+$totalFeriasSolic = $sql->totalFeriasSolic();
+
 $dados = '{"value": ' . $usuarios_ativos . ', "name": "Usuários Ativos"}, {"value": ' . $usuarios_inativos . ', "name": "Usuários Inativos"}';
 
 
@@ -116,6 +119,24 @@ $atrasoEntrada = $sql->atrasoEntrada();
                             </div>
                         </div>
                         <!-- Fim do Painel de Informaca dos usuarios -->
+
+
+                        <!-- Inicio do Painel de Ferias Solicitadas -->
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card sales-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Número de Ferias Solicitadas</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-arrow-up-circle-fill"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6><?=$totalFeriasSolic[0]['ferias']?></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
