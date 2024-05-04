@@ -722,6 +722,20 @@ class SQL {
        return $this->executarQuery($sql); 
     }
 
+    function atualizarFeriasStatus($id, $status){
+
+        $sql = "
+            update gestaoponto.ferias 
+                set status = '$status'
+            where
+                id = $id
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQueryBoleanoTransaction($sql); 
+
+    }
+
 
 
 

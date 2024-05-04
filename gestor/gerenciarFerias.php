@@ -55,12 +55,15 @@ $feriasGeral = $sql->getFeriasPendentes();
 
                     <div class="card">
                         <h5 class="card-header">Preencha os Campos abaixo</h5>
-                        <div class="card-body">
-                            <div class="container">
+                        <div class="card-body mt-3">
+
+                            <h5>Lista de todas as férias solicitadss (status pendentes)</h5>
+
+                            <div class="container mt-4">
 
                             <table class="table table-hover" id="feriasTable">
                             <thead>
-                                <tr>
+                                <tr align="center">
                                 <th scope="col">Funcionario</th>
                                 <th scope="col">Data Inicio</th>
                                 <th scope="col">Duracao</th>
@@ -83,7 +86,8 @@ $feriasGeral = $sql->getFeriasPendentes();
                                     }
 
                                 ?>
-                                <tr>
+                                <tr id="linha_<?=$ferias['id']?>">
+
                                     <td><?=$ferias['nome']?></td>
                                     <td><?=date('d/m/Y', strtotime($ferias['data_inicio']))?></td>
                                     <td><?=$ferias['duracao']?></td>
@@ -91,15 +95,14 @@ $feriasGeral = $sql->getFeriasPendentes();
                                     <td><?=$ferias['dias_adicionais']?></td>
                                     <td> <?=$status?></td>
 
-                                    <td class="row" align="center">
+                                    <td align="center">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn btn-success btn-sm" onclick="acaoFerias(<?=$ferias['id_usuario']?>, '2')"></i> Aprovar</button>
+                                            <button type="button" class="btn btn-success btn-sm" onclick="acaoFerias(<?=$ferias['id']?>, '2')"></i> Aprovar</button>
                                         </div>
                                         <div class="col-md-12 mt-3">
-                                            <button type="button" class="btn btn-danger btn-sm" onclick="acaoFerias(<?=$ferias['id_usuario']?>, '3')"> Reprovar</button>
+                                            <button type="button" class="btn btn-danger btn-sm" onclick="acaoFerias(<?=$ferias['id']?>, '3')"> Reprovar</button>
                                         </div>
                                     </td>
-
 
                                 </tr>
                                 <?php } ?>
