@@ -157,6 +157,14 @@ if($dadosConfig[0]['icone'] != ''){
                                                     </p>
                                                 </div>
                                             <?php } ?>
+                                            <?php if($_SESSION['erro'] == 3){?>
+                                                <div class="w-100 text-md-right">
+                                                    <p style="color: red; text-align: center; margin-top: 20px;">
+                                                        Login bloqueado por questões de segurança.<br>
+                                                        Aguarde 30 minutos para tentar novamente!
+                                                    </p>
+                                                </div>
+                                            <?php } ?>
 
                                             <div>
                                                 <p style="color: black; text-align: justify; margin-top: 40px;">

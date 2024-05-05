@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { #inicio validacao csrf_token
 
     # Inicio validação força bruta
     $maxTentativas = 10; # número máximo de tentativas de login permitidas
-    $tempoBloqueado = 60 * 10; # tempo de bloqueio em segundos (10 minutos)
+    $tempoBloqueado = 60 * 30; # tempo de bloqueio em segundos (30 minutos)
 
 
     # Verificar se o usuario excedeu o limite de tentativas de login
