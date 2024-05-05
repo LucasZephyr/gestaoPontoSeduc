@@ -6,6 +6,10 @@ session_start();
 if(!$_SESSION['usuario']['logado'] == 'sim'){
     header("Location: login.php");
 }
+if($_SESSION['usuario']['perfil'] != '2'){
+    header("Location: index.php");
+}
+
 
 require '../classes/sql.class.php';
 $sql = new SQL();
