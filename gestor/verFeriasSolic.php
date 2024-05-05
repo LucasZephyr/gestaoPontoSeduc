@@ -136,9 +136,11 @@ $ferias = $sql->getFeriasPorUsuarios($_SESSION['usuario']['id_usuario']);
 
                             }else{ #if ?>
 
-                                <div class="card col-md-5 ms-5 mt-5">
+                                <div class="card col-md-5 ms-5 mt-3">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sem Férias</h5>
+                                    <h5 class="card-title">
+                                        <i class="bi bi-x-lg"></i><br> Sem férias solicitadas!
+                                    </h5>
                                     
                                 </div>
                             </div
