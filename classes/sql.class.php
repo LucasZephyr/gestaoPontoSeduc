@@ -154,14 +154,13 @@ class SQL {
         return $this->executarQuery($sql);   
     }
 
-    function getRegistroAbonoPorDia($data, $id_usuario){
+    function getRegistroAbonoPorDia($data){
 
 
         $sql = "
 
             select * from gestaoponto.registros_ponto rp
             where 1 = 1 and 
-            rp.id_usuario = $id_usuario and 
             rp.data = '$data' 
         ";
 
@@ -227,7 +226,7 @@ class SQL {
         return $this->executarQuery($sql);   
     }
 
-        function getAbonosPorUsuarios2($id_usuario, $id_abono){
+    function getAbonosPorUsuarios2($id_usuario, $id_abono){
 
         $sql = "
 
@@ -236,6 +235,24 @@ class SQL {
             from gestaoponto.solicitacaoabonos sa
             where 1 = 1 and 
             sa.id_usuario = '$id_usuario' and
+            sa.id = $id_abono
+            ;
+
+        ";
+
+
+        #echo "<pre>" . $sql ;exit;
+        return $this->executarQuery($sql);   
+    }
+
+    function getAbonosPorUsuarios3($id_abono){
+
+        $sql = "
+
+            select 
+                *
+            from gestaoponto.solicitacaoabonos sa
+            where 1 = 1 and 
             sa.id = $id_abono
             ;
 
@@ -614,6 +631,20 @@ class SQL {
         return $this->executarQuery($sql);    
     }
 
+    function atrasoEntradaPorUsuario($id){
+
+        $sql = "
+                SELECT count(CONCAT_WS(' - ', r.id, r.hora, u.nome)) AS qtd_atraso_na_entrada
+                FROM registros_ponto AS r
+                JOIN usuario AS u ON r.id_usuario = u.id_usuario
+                WHERE TIME(r.hora) > '08:00:00' and
+                r.id_usuario = $id
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQuery($sql);    
+    }
+
 
     function getUsuarios(){
 
@@ -733,6 +764,41 @@ class SQL {
 
         #echo "<pre>" . $sql;exit;
         return $this->executarQueryBoleanoTransaction($sql); 
+
+    }
+
+    function getDadosSolicAbonoPorUsuario($id){
+
+        $sql = "
+        SELECT 
+            SUM(CASE WHEN status = 1 THEN 1 ELSE 0 END) AS pendente,
+            SUM(CASE WHEN status = 2 THEN 1 ELSE 0 END) AS aprovado,
+            SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END) AS reprovado
+        FROM 
+            gestaoponto.solicitacaoabonos 
+        WHERE 
+            id_usuario = $id;
+    
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQuery($sql); 
+
+    }
+
+    function numeroBatidasFeitaEsseMes($id){
+
+        $sql = "
+            SELECT COUNT(*) AS quantidade_batidas
+                FROM gestaoponto.registros_ponto
+            WHERE 
+                MONTH(data) = MONTH(CURRENT_DATE()) AND
+                YEAR(data) = YEAR(CURRENT_DATE()) AND
+                id_usuario = $id
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQuery($sql); 
 
     }
 

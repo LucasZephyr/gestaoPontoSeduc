@@ -11,7 +11,7 @@
                             <i class="bi bi-arrow-up-circle-fill"></i>
                         </div>
                         <div class="ps-3">
-                            <h6><?php echo $registros_ponto[0]['total_registros_ponto']; ?></h6>
+                            <h6><?php echo $registros_ponto[0]['total_registros_ponto']; ?> batidas registradas</h6>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             <i class="bi bi-arrow-up-circle-fill"></i>
                         </div>
                         <div class="ps-3">
-                            <h6><?php echo $abonos_pendentes[0]['total_abonos_pendentes']; ?></h6>
+                            <h6><?php echo $abonos_pendentes[0]['total_abonos_pendentes']; ?> Abonos</h6>
 
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             <i class="bi bi-arrow-up-circle-fill"></i>
                         </div>
                         <div class="ps-3">
-                            <h6><?=$totalFeriasSolic[0]['ferias']?></h6>
+                            <h6><?=$totalFeriasSolic[0]['ferias']?> Ferias</h6>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                             left: 'center'
                         },
                         series: [{
-                            name: 'nome editavel aqui',
+                            //name: 'nome editavel aqui',
                             type: 'pie',
                             radius: ['40%', '70%'],
                             avoidLabelOverlap: false,

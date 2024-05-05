@@ -26,7 +26,39 @@ $abonos_pendentes = $sql->totalAbonosPendentes();
 $atrasoEntrada = $sql->atrasoEntrada();
 #echo '<pre>';print_r($atrasoEntrada);echo '</pre>';exit;
 
-#echo "<pre>";print_r($_SESSION);exit
+#echo "<pre>";print_r($_SESSION);exit;
+
+
+$dadosBasico = $sql->getDadosSolicAbonoPorUsuario($_SESSION['usuario']['id_usuario']);
+$dadosBasico = array(
+    array(
+        "value" => $dadosBasico[0]['pendente'],
+        "name" => "Pendente"
+    ),
+    array(
+        "value" => $dadosBasico[0]['aprovado'],
+        "name" => "Aprovado"
+    ),
+    array(
+        "value" => $dadosBasico[0]['reprovado'],
+        "name" => "Reprovado"
+    )
+);
+$dadosBasico = json_encode($dadosBasico);
+$dadosBasico = ltrim($dadosBasico, '[');
+$dadosBasico = rtrim($dadosBasico, ']');
+
+$numeroBatidasFeitaEsseMes = $sql->numeroBatidasFeitaEsseMes($_SESSION['usuario']['id_usuario']);
+#echo '<pre>';print_r($numeroBatidasFeitaEsseMes);exit;
+
+
+$atrasoEntradaUser = $sql->atrasoEntradaPorUsuario($_SESSION['usuario']['id_usuario']);
+#echo '<pre>';print_r($atrasoEntradaUser);exit;
+
+
+
+
+
 
 
 ?>

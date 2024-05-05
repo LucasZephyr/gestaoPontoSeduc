@@ -24,3 +24,4 @@
 /gestaoPontoSeduc/gestor/gerenciarFerias.php##&ip:kubernetes.docker.internal&horario:2024-05-04 19:17:12&usuario_id:6&usuario_nome:Antonio Lucas Matos do Carmo(adm)
 /gestaoPontoSeduc/gestor/ajax/ajaxGerenciarFerias.php##&ip:kubernetes.docker.internal&horario:2024-05-04 19:31:00&usuario_id:&usuario_nome:
 /gestaoPontoSeduc/gestor/ajax/criaUsuario.php##&ip:kubernetes.docker.internal&horario:2024-05-05 06:33:23&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/ajax/verDetalhesAbonoSolicAdm.php##&ip:kubernetes.docker.internal&horario:2024-05-05 09:44:58&usuario_id:&usuario_nome:

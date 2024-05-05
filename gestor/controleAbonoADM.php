@@ -103,6 +103,19 @@ $getAbonos = $sql->getAbonos();
                                             </button>
                                         </div>
 
+                                        <button 
+                                        class="btn btn-secondary mt-3" 
+                                        data-dia="<?=$data?>" 
+                                        data-idAbono="<?=$id?>" 
+                                        type="button" 
+                                        id="btnVerDetalhes" 
+                                        onclick='verDetalhesAbono(this)'
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#modalVerDetalhesAbono"
+                                        >
+                                            Ver Detalhes
+                                        </button>
+
                                     </div>
 
                                   </div>
