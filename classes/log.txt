@@ -25,3 +25,7 @@
 /gestaoPontoSeduc/gestor/ajax/ajaxGerenciarFerias.php##&ip:kubernetes.docker.internal&horario:2024-05-04 19:31:00&usuario_id:&usuario_nome:
 /gestaoPontoSeduc/gestor/ajax/criaUsuario.php##&ip:kubernetes.docker.internal&horario:2024-05-05 06:33:23&usuario_id:&usuario_nome:
 /gestaoPontoSeduc/gestor/ajax/verDetalhesAbonoSolicAdm.php##&ip:kubernetes.docker.internal&horario:2024-05-05 09:44:58&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/gerenciarConfig.php##&ip:kubernetes.docker.internal&horario:2024-05-05 18:23:31&usuario_id:6&usuario_nome:Antonio Lucas Matos do Carmo(adm)
+/gestaoPontoSeduc/gestor/processaConfig.php##&ip:kubernetes.docker.internal&horario:2024-05-05 19:01:57&usuario_id:6&usuario_nome:Antonio Lucas Matos do Carmo(adm)
+/gestaoPontoSeduc/gestor/procotocoloRecuperarSenha.php##&ip:kubernetes.docker.internal&horario:2024-05-05 19:56:38&usuario_id:&usuario_nome:
+/gestaoPontoSeduc/gestor/login.php##&ip:kubernetes.docker.internal&horario:2024-05-05 19:59:16&usuario_id:&usuario_nome:

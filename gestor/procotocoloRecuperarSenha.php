@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+require '../classes/sql.class.php';
+$sql = new SQL();
+
+$varLucas = $sql->getDadosSistema();
 ?>
 
 
@@ -28,7 +33,7 @@ session_start();
 
 <div class="d-flex align-items-center justify-content-between">
     <a href="index.php" class="logo d-flex align-items-center">
-        <img src="../assets/img/brasao.png" alt="">
+        <img src="../assets/img/<?=$varLucas[0]['icone']?>" alt="">
         <span class="d-none d-lg-block">Registro de Ponto</span>
     </a>
 </div>

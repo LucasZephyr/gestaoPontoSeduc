@@ -110,6 +110,8 @@ function verificar_credenciais($matricula, $senha) {
     $verificaLogin = $oSQL->verificarLogin($matricula, $senha);
     #echo "<pre>";print_r($verificaLogin);exit;
 
+    $configSis = $oSQL->getDadosSistema();
+
     if(empty($verificaLogin)){
 
         $_SESSION['usuario']['logado'] = 'nao';
@@ -132,6 +134,13 @@ function verificar_credenciais($matricula, $senha) {
         $_SESSION['usuario']['funcao'] = $verificaLogin[0]['funcao'];
         $_SESSION['usuario']['data_nascimento'] = $verificaLogin[0]['data_nascimento'];
         $_SESSION['usuario']['login'] = $verificaLogin[0]['login'];
+
+        $_SESSION['config']['nome']         = $configSis[0]['nomeSistema'];
+        $_SESSION['config']['titulo']       = $configSis[0]['titulo'];
+        $_SESSION['config']['subtitulo']    = $configSis[0]['subtitulo'];
+        $_SESSION['config']['icone']        = $configSis[0]['icone'];
+        $_SESSION['config']['descricao']    = $configSis[0]['descricao'];
+
 
 
         return true;

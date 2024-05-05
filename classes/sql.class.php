@@ -802,6 +802,37 @@ class SQL {
 
     }
 
+    function getDadosSistema(){
+        $sql = '
+            select * from gestaoponto.sistema s
+
+        ';
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQuery($sql); 
+    }
+
+    function atualizaDadosSitema($nomeSistema, $icone, $titulo, $subtitulo, $descricao){
+
+        $sql = "
+        
+            update gestaoponto.sistema 
+                set 
+                    nomeSistema     = '$nomeSistema',
+                    icone           = '$icone',
+                    titulo          = '$titulo',
+                    subtitulo       = '$subtitulo',
+                    descricao       = '$descricao'
+
+            where id = 1
+
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQueryBoleanoTransaction($sql); 
+    }
+
+
 
 
 

@@ -5,6 +5,14 @@ alter table gestaoponto.ferias add column status varchar(1);
 ALTER TABLE `ferias` CHANGE `status` `status` VARCHAR(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '1- pendente, 2-aprovado, 3-reprovado';
 
 
+CREATE TABLE sistema (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomeSistema VARCHAR(50),
+    icone VARCHAR(30),
+    titulo VARCHAR(20),
+    subtitulo VARCHAR(10),
+    descricao VARCHAR(255)
+);
 
 
 

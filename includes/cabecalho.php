@@ -1,7 +1,6 @@
 
-
-<link href="../assets/img/brasao.png" rel="icon">
-<link href="../assets/img/brasao.png" rel="apple-touch-icon">
+<link href="../assets/img/<?=$_SESSION['config']['icone']?>" rel="icon">
+<link href="../assets/img/<?=$_SESSION['config']['icone']?>" rel="apple-touch-icon">
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
 <link

@@ -29,6 +29,29 @@ if(!$_SESSION['erro']){
 }
 
 
+require '../classes/sql.class.php';
+$sql = new SQL();
+
+$dadosConfig = $sql->getDadosSistema();
+
+if($dadosConfig[0]['icone'] != ''){
+    $imgBrasaoNav = $dadosConfig[0]['icone'];
+
+    $nomeSistema = $dadosConfig[0]['nomeSistema'];
+    $titulo = $dadosConfig[0]['titulo'];
+    $subtitulo = $dadosConfig[0]['subtitulo'];
+    $descricao = $dadosConfig[0]['descricao'];
+
+
+}else{
+    
+    $nomeSistema = $_SESSION['config']['nome'];
+    $titulo = $_SESSION['config']['titulo'];
+    $subtitulo = $_SESSION['config']['subtitulo'];
+    $descricao = $_SESSION['config']['descricao'];
+}
+
+
 ?>
 
 
@@ -57,8 +80,8 @@ if(!$_SESSION['erro']){
 
 <div class="d-flex align-items-center justify-content-between">
     <a href="index.php" class="logo d-flex align-items-center">
-        <img src="../assets/img/brasao.png" alt="">
-        <span class="d-none d-lg-block">Registro de Ponto</span>
+        <img src="../assets/img/<?=$imgBrasaoNav?>" alt="">
+        <span class="d-none d-lg-block"><?=$nomeSistema?></span>
     </a>
 </div>
 
@@ -97,8 +120,8 @@ if(!$_SESSION['erro']){
                                     <div class="login-wrap p-4 p-md-5">
 
 
-                                       <h3 class="text-center mb-4">Registro de Ponto <br>
-                                            <b style="color: #012970; font-family: 'Nunito', sans-serif'";>Entrar</b>
+                                       <h3 class="text-center mb-4"><?=$titulo?><br>
+                                            <b style="color: #012970; font-family: 'Nunito', sans-serif'";><?=$subtitulo?></b>
                                         </h3>
 
 
@@ -134,6 +157,12 @@ if(!$_SESSION['erro']){
                                                     </p>
                                                 </div>
                                             <?php } ?>
+
+                                            <div>
+                                                <p style="color: black; text-align: justify; margin-top: 40px;">
+                                                    <?=$descricao?>
+                                                </p>
+                                            </div>
                                             
 
                                           </div>

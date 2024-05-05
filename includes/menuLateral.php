@@ -139,6 +139,22 @@
     </li>
 
 
+    <?php if($liberadoSubMenu){ ?>
+    <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#configuracoesAba" href="#" id="acaoConfiguracoesAba">
+        <i class="bi bi-gear"></i><span>Configurações</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="configuracoesAba" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+                <a href="gerenciarConfig.php">
+                    <i class="bi bi-circle"></i><span>Configuraçoes do sistema</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <?php } ?>
+
+
 
 </ul>
 
@@ -194,6 +210,16 @@ $("#acaoRelatorios").click(function() {
         $("#relatorios").removeClass('show');
     }else{
         $("#relatorios").addClass('show');
+    }
+});
+
+//
+$("#acaoConfiguracoesAba").click(function() {
+    let cadastroLista = $("#configuracoesAba").hasClass('show');
+    if(cadastroLista){
+        $("#configuracoesAba").removeClass('show');
+    }else{
+        $("#configuracoesAba").addClass('show');
     }
 });
 </script>

@@ -13,13 +13,25 @@
 
                         <div class="ps-3">
                             <h6>
-                                <?php 
-                                    #numero de dias do mes atual
-                                    $numero_dias = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));
-                                    # 4 batidas por dia vezes o numeros de dias do mes
-                                    echo $numero_dias * 4 . ' / ' . $numeroBatidasFeitaEsseMes[0]['quantidade_batidas'];
-                                ?>
-                                    batidas registradas
+                            <?php 
+                                $ano_atual = date('Y');
+                                $mes_atual = date('m');
+                                $numero_dias = cal_days_in_month(CAL_GREGORIAN, $mes_atual, $ano_atual);
+                                $batidas_esperadas = 0;
+
+                                for ($dia = 1; $dia <= $numero_dias; $dia++) {
+                                    $data = "$ano_atual-$mes_atual-$dia";
+                                    $dia_da_semana = date('N', strtotime($data));
+                                    
+                                    #dia util (segunda a sexta-feira)
+                                    if ($dia_da_semana >= 1 && $dia_da_semana <= 5) {
+                                        $batidas_esperadas += 4; #4 batidas por
+                                    }
+                                }
+
+                                echo $batidas_esperadas . ' / ' . $numeroBatidasFeitaEsseMes[0]['quantidade_batidas'] . ' batidas registradas';
+                            ?>
+
                             </h6>
                         </div>
 
@@ -30,7 +42,7 @@
         </div>
 
 
-        <div class="col-xxl-4 col-md-6">
+        <div class="col-xxl-4 col-md-12">
             <div class="card info-card sales-card">
                 <div class="card-body">
                     <h5 class="card-title">Batidas Atrasadas</h5>
@@ -51,24 +63,6 @@
             </div>
         </div>
 
-
-        <div class="col-xxl-4 col-md-6">
-            <div class="card info-card sales-card">
-                <div class="card-body">
-                    <h5 class="card-title">Hora Extra</h5>
-                    <div class="d-flex align-items-center">
-                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                            <i class="bi bi-arrow-up-circle-fill"></i>
-                        </div>
-                        <div class="ps-3">
-                            <h6>
-
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </div>

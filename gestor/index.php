@@ -59,8 +59,6 @@ $atrasoEntradaUser = $sql->atrasoEntradaPorUsuario($_SESSION['usuario']['id_usua
 
 
 
-
-
 ?>
 
 <!DOCTYPE html>
