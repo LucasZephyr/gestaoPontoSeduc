@@ -812,7 +812,44 @@ class SQL {
         return $this->executarQuery($sql); 
     }
 
+    function insertBasicoTableSistema(){
+
+        $sql = "
+            INSERT INTO sistema(
+                nomeSistema, icone, titulo, subtitulo, descricao) 
+                VALUES (
+                    '',
+                    '',
+                    '',
+                    '',
+                    ''
+                )
+        ";
+
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQueryBoleanoTransaction($sql);
+
+    }
+
+    function selectBasicoTableSistema(){
+
+        $sql = "
+            select * from gestaoponto.sistema s
+            where id = 1
+        ";
+        
+        #echo "<pre>" . $sql;exit;
+        return $this->executarQueryBoleanoTransaction($sql);
+    }
+
     function atualizaDadosSitema($nomeSistema, $icone, $titulo, $subtitulo, $descricao){
+
+        $var = $this->selectBasicoTableSistema();
+
+        if($var){
+            $this->insertBasicoTableSistema();
+        }
+        
 
         $sql = "
         
