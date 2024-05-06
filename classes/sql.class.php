@@ -869,6 +869,18 @@ class SQL {
         return $this->executarQueryBoleanoTransaction($sql); 
     }
 
+    function getDadoFeriasRelatorio(){
+        $sql = "
+            SELECT * from gestaoponto.ferias f
+                JOIN gestaoponto.usuario u
+                on u.id_usuario = f.id_usuario
+                where u.ativo = 1;
+        ";
+
+    #echo "<pre>" . $sql;exit;
+    return $this->executarQuery($sql); 
+    }
+
 
 
 

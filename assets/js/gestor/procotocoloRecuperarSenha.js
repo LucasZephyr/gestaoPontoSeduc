@@ -23,7 +23,7 @@ function atualizarRelogio() {
     document.getElementById("relogio").innerHTML = horaAtual;
 }
 
-setInterval(atualizarRelogio, 1000); // chama a função a cada segundo
+setInterval(atualizarRelogio, 1000); // chama a funcao a cada segundo
 
 
 

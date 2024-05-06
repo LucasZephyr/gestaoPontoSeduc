@@ -75,6 +75,7 @@
     </li>
     <?php } ?>
 
+    <?php if($liberadoSubMenu){ ?>
     <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#consultas" href="#" id="acaoConsultas">
             <i class="bi bi-calendar3"></i><span>Consultas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -82,11 +83,12 @@
         <ul id="consultas" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
                 <a href="consultaExpediente.php">
-                    <i class="bi bi-circle"></i><span>Consulta de Expediente</span>
+                    <i class="bi bi-circle"></i><span>Relat&oacute;rio de Férias</span>
                 </a>
             </li>
         </ul>
     </li>
+    <?php } ?>
 
 
     <li class="nav-item">
