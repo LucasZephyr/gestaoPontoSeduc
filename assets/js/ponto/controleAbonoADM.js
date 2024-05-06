@@ -4,7 +4,7 @@ function aprovar(botao){
 
 	let dados = {
 		"id_abono": dataId,
-        "aprovar": "true"
+    "aprovar": "true"
 	}
 
 	$.ajax({
@@ -102,10 +102,12 @@ function verDetalhesAbono(botao){
 
 	let dataDia = botao.getAttribute('data-dia');
 	let dataId = botao.getAttribute('data-idAbono');
+  let dataIdUsuario = botao.getAttribute('data-idUsuario');
 
 	let dados = {
 		"dia": dataDia,
-		"id_abono": dataId
+		"id_abono": dataId,
+    "id_usuario": dataIdUsuario
 	}
 
 	$.ajax({

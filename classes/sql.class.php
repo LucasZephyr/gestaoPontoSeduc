@@ -154,13 +154,14 @@ class SQL {
         return $this->executarQuery($sql);   
     }
 
-    function getRegistroAbonoPorDia($data){
+    function getRegistroAbonoPorDia($data, $id_usuario){
 
 
         $sql = "
 
             select * from gestaoponto.registros_ponto rp
             where 1 = 1 and 
+            rp.id_usuario = $id_usuario and
             rp.data = '$data' 
         ";
 
@@ -874,7 +875,22 @@ class SQL {
             SELECT * from gestaoponto.ferias f
                 JOIN gestaoponto.usuario u
                 on u.id_usuario = f.id_usuario
-                where u.ativo = 1;
+                where 
+                    u.ativo = 1 and
+                    f.status = '1';
+        ";
+
+    #echo "<pre>" . $sql;exit;
+    return $this->executarQuery($sql); 
+    }
+
+
+    function getDadoAbonosRelatorio(){
+        $sql = "
+            SELECT * from gestaoponto.solicitacaoabonos sa
+                join gestaoponto.usuario u
+            on u.id_usuario = sa.id_usuario 
+            order by u.nome asc
         ";
 
     #echo "<pre>" . $sql;exit;

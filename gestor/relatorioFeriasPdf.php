@@ -27,6 +27,15 @@ class PDF extends FPDF
         $this->Cell(0,6,date('Y'),0,1,'C');
         $this->Cell(0,6,utf8_decode('Registro de Ponto Eletrônico'),0,1,'C');
 
+        $this->Ln(5);
+        $this->Cell(
+            35,
+            15,
+            utf8_decode('Esse documento representa todos os usúarios ativos do sistema com solicitações de ferias pendente.'),
+            0,
+            1
+        );
+
         $this->Ln(10);
 
         $this->SetFillColor(220,220,220);
@@ -75,6 +84,7 @@ $pdf->SetFont('Arial','',12);
 
 
 $pdf->ChapterBody($getDadoFeriasRelatorio);
+
 
 $nomeArquivo = 'relatorio_ferias_' . date('d/m/Y');
 

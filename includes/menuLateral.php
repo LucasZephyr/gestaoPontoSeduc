@@ -86,6 +86,12 @@
                     <i class="bi bi-circle"></i><span>Relat&oacute;rio de Férias</span>
                 </a>
             </li>
+
+            <li>
+                <a href="relAbonos.php">
+                    <i class="bi bi-circle"></i><span>Relat&oacute;rio de Abonos</span>
+                </a>
+            </li>
         </ul>
     </li>
     <?php } ?>

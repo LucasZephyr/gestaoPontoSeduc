@@ -13,7 +13,6 @@ $getRegistroAbonoPorDia = $sql->getRegistroAbonoPorDia($data, $_SESSION['usuario
 #echo "<pre>";print_r($getRegistroAbonoPorDia);exit;
 
 
-
 $html = '
 	<form class="row g-3" id="frmJustificativaAbono" onsubmit="return false;">
 

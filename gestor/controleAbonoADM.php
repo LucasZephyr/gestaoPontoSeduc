@@ -75,6 +75,7 @@ $getAbonos = $sql->getAbonos();
                             $data = $abonos['dia'];
                             $id = $abonos['id'];
                             $dataFormatada = DateTime::createFromFormat('Y-m-d', $data)->format('d/m/Y'); 
+                            $id_usuario = $abonos['id_usuario'];
                             
                         ?>
                         <div class="col-md-4 mt-3" id="card<?=$id?>">
@@ -107,6 +108,7 @@ $getAbonos = $sql->getAbonos();
                                         class="btn btn-secondary mt-3" 
                                         data-dia="<?=$data?>" 
                                         data-idAbono="<?=$id?>" 
+                                        data-idUsuario="<?=$id_usuario?>" 
                                         type="button" 
                                         id="btnVerDetalhes" 
                                         onclick='verDetalhesAbono(this)'

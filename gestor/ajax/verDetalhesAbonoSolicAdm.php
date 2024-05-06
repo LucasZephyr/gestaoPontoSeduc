@@ -8,7 +8,8 @@ session_start();
 
 $getSolicitacao = $sql->getAbonosPorUsuarios3($_REQUEST['id_abono']);
 
-$getRegistros = $sql->getRegistroAbonoPorDia($_REQUEST['dia']);
+#$getRegistros = $sql->getRegistroAbonoPorDia($_REQUEST['dia']);
+$getRegistros = $sql->getRegistroAbonoPorDia($_REQUEST['dia'], $_REQUEST['id_usuario']);
 
 #echo "<pre>";print_r($getSolicitacao);echo "</pre>";
 #echo "<pre>";print_r($getRegistros);echo "</pre>";
