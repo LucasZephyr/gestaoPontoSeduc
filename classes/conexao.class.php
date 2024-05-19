@@ -15,11 +15,7 @@ class Conexao{
 		$oProtecao->protecao($_REQUEST);
 		
 		switch ($servidor){			
-			/*			
-			case "Homologacao":
-				$this->conexaoBD("192.168.200.52","apsuser","wc35v@hml#&12","seduc_homologacao");
-			break;
-			*/
+
 
 			case "Homologacao":
 				$this->conexaoBD("localhost","root","","gestaoponto");
